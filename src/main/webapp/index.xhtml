@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"      
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      >
+    <ui:composition template="/template.xhtml">
+        <ui:define name="menu">
+            <h:form>
+                <h:commandButton value="Cadastrar Usuario" styleClass="btn btn-success">
+                    <f:ajax listener="#{usuarioControl.cadastrar}"   render='visualizacao'/>   
+                </h:commandButton>
+            </h:form>
+        </ui:define>
+        <ui:define name="corpo">
+
+            <h:panelGroup id="visualizacao">
+                <h:form>
+                    <h:panelGrid rendered="#{usuarioControl.loginView}" columns="2" id="loginView">
+                        <h:outputLabel>Login:</h:outputLabel>
+                        <h:inputText value="#{usuarioControl.login}" />
+                        <h:outputLabel>Senha:</h:outputLabel>
+                        <h:inputSecret value="#{usuarioControl.senha}"/>
+                        <h:outputLabel>&nbsp;</h:outputLabel>
+                        <h:commandButton value="Entrar" action="#{usuarioControl.autenticar}" styleClass="btn btn-primary"/>
+                    </h:panelGrid>
+
+                </h:form>
+
+
+                <h:form>
+                    <h:panelGrid columns="2" rendered="#{usuarioControl.cadastroView}"  id="cadastroView" >
+
+
+                        <h:outputLabel>Nome:</h:outputLabel>
+                        <h:inputText value="#{usuarioControl.usuario.nome}"/>
+
+                        <h:outputLabel>Curso:</h:outputLabel>
+                        <h:inputText value="#{usuarioControl.usuario.curso}"/>
+
+                        <h:outputLabel>Email:</h:outputLabel>
+                        <h:inputText value="#{usuarioControl.usuario.email}"/>
+
+                        <h:outputLabel>Semestre:</h:outputLabel>
+                        <h:inputText value="#{usuarioControl.usuario.semestre}"/>
+
+                        <h:outputLabel>Usuario:</h:outputLabel>
+                        <h:inputText value="#{usuarioControl.usuario.usuario}"/>
+
+                        <h:outputLabel class="password">Senha:</h:outputLabel>
+                        <h:inputSecret value="#{usuarioControl.usuario.senha}"/>
+
+                        <h:outputLabel>&nbsp;</h:outputLabel>
+                        <h:commandButton value="Cadastrar Usuario" >
+                            <f:ajax listener="#{usuarioControl.salvar}" event="click" render="vizualizacao"/>
+                        </h:commandButton>
+
+
+                    </h:panelGrid>
+                </h:form>
+            </h:panelGroup>
+        </ui:define>
+    </ui:composition>
+</html>

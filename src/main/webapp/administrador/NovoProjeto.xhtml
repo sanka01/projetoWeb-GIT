@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="/template.xhtml">
+	<ui:define name="titulo">Novo Projeto</ui:define>
+	<ui:define name="corpo">
+    
+        		<h:panelGrid columns="1">
+                            <h:form>
+                            <h:outputLabel>Nome</h:outputLabel>
+                            <h:inputText value="#{projetoControl.projeto.nome}" required="true"/>
+                            
+                            
+                            <h:commandButton id="salvar" action="#{projetoControl.salvar}" value="Salvar"/>
+                            <h:outputLabel>#{projetoControl.mensagem}</h:outputLabel>
+                            </h:form>
+                        </h:panelGrid>
+        </ui:define>
+    </ui:composition>
+</html>
+

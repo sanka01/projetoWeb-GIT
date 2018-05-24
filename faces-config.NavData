@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Faces Configuration Only" version="2">
+    <Scope Scope="Faces Configuration Only">
+        <Node id="index.xhtml" x="192" y="287" zoom="true"/>
+        <Node id="administrador/menuPrincipal.xhtml" x="126" y="134" zoom="true"/>
+    </Scope>
+    <Scope Scope="Project">
+        <Node id="template.xhtml" x="629" y="327" zoom="true"/>
+        <Node id="index.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="cadastro.xhtml" x="420" y="75" zoom="true"/>
+        <Node id="default.xhtml" x="400" y="300" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations">
+        <Node id="livro/edicao.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="livro/cadastro.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="*" x="150" y="300" zoom="true"/>
+        <Node id="index.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="principal.xhtml" x="900" y="150" zoom="true"/>
+    </Scope>
+</Scene>
